@@ -10,4 +10,7 @@ private items: Ingredient[] = [];
     addItems(item : Ingredient[]) {
         Array.prototype.push.apply(this.items, item);
     }
+    addItem(item: Ingredient) {
+        this.items.push(item);
+    }
 }

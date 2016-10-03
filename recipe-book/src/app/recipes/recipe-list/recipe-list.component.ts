@@ -8,16 +8,10 @@ import {RecipeService} from "../recipe.service";
 })
 export class RecipeListComponent implements OnInit {
     recipes: Recipes[] = [];
-    @Output() recipeSelected = new EventEmitter();
     //recipe = new Recipes("Dummy", "dummy", "https://pbs.twimg.com/profile_images/1620149654/avatar.jpg");
   constructor(private recipeService: RecipeService) { }
 
   ngOnInit() {
-      this.recipes = this.recipeService.getRecipe();
+      this.recipes = this.recipeService.getRecipes();
   }
-
-  onSelected(recipe: Recipes){
-    this.recipeSelected.emit(recipe);
-  }
-
 }

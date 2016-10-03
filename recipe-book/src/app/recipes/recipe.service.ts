@@ -14,7 +14,14 @@ export class RecipeService {
   ];
 
   constructor() { }
-    getRecipe() {
+    getRecipes() {
         return this.recipes;
+    }
+
+    getRecipe(id: number){
+        return this.recipes[id];
+    }
+    deleteRecipe(recipe: Recipes){
+        this.recipes.splice(this.recipes.indexOf(recipe),1);
     }
 }
