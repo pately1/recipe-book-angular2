@@ -13,11 +13,10 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown" rbdropdown>
-          <a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">User<span class="caret"></span></a>
+          <a class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Recipe Book Management<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Log in</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Logout</a></li>
+            <li><a (click)="onStore()" style="cursor: pointer">Store Recipe</a></li>
+            <li><a (click)="onGet()" style="cursor: pointer">Retrieve Recipe</a></li>
           </ul>
         </li>
       </ul>
